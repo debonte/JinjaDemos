@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Item ID: {{ id }}</h1>
+
+    {% for cat in cats %}
+        <li>{{ cat.age }}</li>
+        <li>{{ cat.colors }}</li>
+    {% else %}
+        <li>{{ nonexistant }}</li>
+    {% endfor %}
+
+    {% if dogOpinion2 == "great!" %}
+        <li>{{ "foo" }}</li>
+    {% elif dogOpinion2 == "good" %}
+        <li>{{ "bar" }}</li>
+    {% else %}
+        <li>{{ "baz" }}</li>
+    {% endif %}
+ </body>
+</html>
